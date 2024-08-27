@@ -19,8 +19,8 @@ public class RentalReceiptDetailServiceImp extends BaseServiceImpl implements Re
     }
 
     @Override
-    public RentalReceiptDetail getRentalReceiptDetailById(String rentalReceiptID) {
-        return rentalReceiptDetailDAO.getRentalReceiptDetailById(rentalReceiptID);
+    public RentalReceiptDetail getRentalReceiptDetailById(Integer id) {
+        return rentalReceiptDetailDAO.getRentalReceiptDetailById(id);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class RentalReceiptDetailServiceImp extends BaseServiceImpl implements Re
     }
 
     @Override
-    public void deleteRentalReceiptDetail(String rentalReceiptID) {
-        rentalReceiptDetailDAO.deleteRentalReceiptDetail(rentalReceiptID);
+    public void deleteRentalReceiptDetail(Integer id) {
+        rentalReceiptDetailDAO.deleteRentalReceiptDetail(id);
     }
 }

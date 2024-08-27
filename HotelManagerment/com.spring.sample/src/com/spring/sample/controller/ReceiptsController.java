@@ -14,7 +14,7 @@ import com.spring.sample.service.RentalReceiptDetailService;
 import java.util.List;
 
 @Controller
-public class ReceiptController {
+public class ReceiptsController {
 
     @Autowired
     private ReceiptService receiptService;
@@ -31,24 +31,22 @@ public class ReceiptController {
         model.addAttribute("receipts", receipts);
         
         // Trả về file receipt.html
-        return "sessions/receipt/receipt";
+        return "sessions/receipt/index";
     }
     
-    @GetMapping("/receipts/{rentalReceiptID}")
-    public String viewReceiptDetails(@PathVariable String rentalReceiptID, Model model) {
-        // Lấy danh sách RentalReceiptDetail theo rentalReceiptID
-        RentalReceiptDetail rentalReceiptDetail = rentalReceiptDetailService.getRentalReceiptDetailById(rentalReceiptID);
+    @GetMapping("/receipts/{id}")
+    public String viewReceiptDetails(@PathVariable Integer id, Model model) {
+        RentalReceiptDetail rentalReceiptDetail = rentalReceiptDetailService.getRentalReceiptDetailById(id);
         
         // Thêm thông tin chi tiết hóa đơn vào mô hình
-        model.addAttribute("rentalReceiptID", rentalReceiptDetail.getRentalReceiptID());
+        model.addAttribute("id", rentalReceiptDetail.getRentalReceiptID());
         model.addAttribute("issueDate", rentalReceiptDetail.getIssueDate());
         model.addAttribute("paymentDate", rentalReceiptDetail.getPaymentDate());
         model.addAttribute("totalAmount", rentalReceiptDetail.getTotalAmount());
         model.addAttribute("invoicePaymentStatusText", rentalReceiptDetail.getInvoicePaymentStatusText());
         model.addAttribute("rentalReceiptDetails", rentalReceiptDetail);
         
-        // Trả về file receipt-details.html
-        return "sessions/receipt/receipt-details";
+        return "sessions/receipt/show";
     }
 
 

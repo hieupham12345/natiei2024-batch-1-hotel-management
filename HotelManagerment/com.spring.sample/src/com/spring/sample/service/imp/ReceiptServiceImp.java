@@ -19,7 +19,7 @@ public class ReceiptServiceImp extends BaseServiceImpl implements ReceiptService
     }
 
     @Override
-    public Receipt getReceiptById(Long id) {
+    public Receipt getReceiptById(Integer id) {
         return receiptDAO.getReceiptById(id);
     }
 
@@ -29,7 +29,7 @@ public class ReceiptServiceImp extends BaseServiceImpl implements ReceiptService
     }
 
     @Override
-    public void deleteReceipt(Long id) {
+    public void deleteReceipt(Integer id) {
         receiptDAO.deleteReceipt(id);
     }
 }

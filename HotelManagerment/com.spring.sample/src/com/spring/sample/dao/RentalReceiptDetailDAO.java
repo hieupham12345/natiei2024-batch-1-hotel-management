@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface RentalReceiptDetailDAO {
     List<RentalReceiptDetail> getAllRentalReceiptDetails();
-    RentalReceiptDetail getRentalReceiptDetailById(String customerID);
+    RentalReceiptDetail getRentalReceiptDetailById(Integer id);  // Thay đổi kiểu dữ liệu từ String sang Integer
     void saveRentalReceiptDetail(RentalReceiptDetail rentalReceiptDetail);
-    void deleteRentalReceiptDetail(String customerID);
+    void deleteRentalReceiptDetail(Integer id);  // Thay đổi kiểu dữ liệu từ String sang Integer
 }

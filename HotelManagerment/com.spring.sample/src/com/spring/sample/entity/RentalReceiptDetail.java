@@ -10,7 +10,7 @@ public class RentalReceiptDetail extends BaseEntity implements Serializable {
 
     @Id
     @Column(name = "RentalReceiptID")
-    private String rentalReceiptID;
+    private int id;
 
     @Column(name = "CustomerName")
     private String customerName;
@@ -67,11 +67,11 @@ public class RentalReceiptDetail extends BaseEntity implements Serializable {
     // Getters and Setters
 
     public String getRentalReceiptID() {
-        return rentalReceiptID;
+        return id;
     }
 
-    public void setRentalReceiptID(String rentalReceiptID) {
-        this.rentalReceiptID = rentalReceiptID;
+    public void setRentalReceiptID(Integer id) {
+        this.id = id;
     }
 
     public String getCustomerName() {

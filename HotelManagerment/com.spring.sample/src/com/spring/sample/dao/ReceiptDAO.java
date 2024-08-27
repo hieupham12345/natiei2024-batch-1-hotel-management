@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ReceiptDAO {
     List<Receipt> getAllReceipts();
-    Receipt getReceiptById(Long id);
+    Receipt getReceiptById(Integer id);  // Thay đổi kiểu dữ liệu từ Long sang int
     void saveReceipt(Receipt receipt);
-    void deleteReceipt(Long id);
+    void deleteReceipt(Integer id);  // Thay đổi kiểu dữ liệu từ Long sang int
 }

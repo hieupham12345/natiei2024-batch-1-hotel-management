@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface RentalReceiptDetailService {
     List<RentalReceiptDetail> getAllRentalReceiptDetails();
-    RentalReceiptDetail getRentalReceiptDetailById(String rentalReceiptID);
+    RentalReceiptDetail getRentalReceiptDetailById(Integer id);
     void saveRentalReceiptDetail(RentalReceiptDetail rentalReceiptDetail);
-    void deleteRentalReceiptDetail(String rentalReceiptID);
+    void deleteRentalReceiptDetail(Integer id);
 }

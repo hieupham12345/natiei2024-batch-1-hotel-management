@@ -34,9 +34,9 @@ public class RentalReceiptDetailDAOImp extends GenericDAOImp<RentalReceiptDetail
     }
 
     @Override
-    public RentalReceiptDetail getRentalReceiptDetailById(String customerID) {
+    public RentalReceiptDetail getRentalReceiptDetailById(Integer id) {
         logger.info("Fetching rental receipt detail by ID from the database");
-        return getHibernateTemplate().get(RentalReceiptDetail.class, customerID);
+        return getHibernateTemplate().get(RentalReceiptDetail.class, id);
     }
 
     @Override

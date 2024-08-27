@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class ReceiptModel extends BaseModel {
 
-    private Long rentalReceiptID;
+    private Integer id;  // Thay đổi kiểu dữ liệu từ Long thành Integer
 
     @NotNull(message = "{receipt.validation.roomID.required}")
     private Long roomID;
@@ -31,8 +31,8 @@ public class ReceiptModel extends BaseModel {
     public ReceiptModel() {
     }
 
-    public ReceiptModel(Long rentalReceiptID) {
-        this.rentalReceiptID = rentalReceiptID;
+    public ReceiptModel(Integer id) {
+        this.id = id;
     }
 
     public ReceiptModel(Long roomID, Date checkInDate, Date checkOutDate, Double dailyRate, String paymentStatus) {
@@ -45,12 +45,12 @@ public class ReceiptModel extends BaseModel {
 
     // Getters and Setters
 
-    public Long getRentalReceiptID() {
-        return rentalReceiptID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setRentalReceiptID(Long rentalReceiptID) {
-        this.rentalReceiptID = rentalReceiptID;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Long getRoomID() {

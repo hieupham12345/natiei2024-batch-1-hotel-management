@@ -10,10 +10,10 @@ public class Receipt extends BaseEntity implements Serializable {
 
     @Id
     @Column(name = "RentalReceiptID")
-    private String rentalReceiptID;
+    private int id;
 
     @Column(name = "RoomID")
-    private String roomID;
+    private int roomID;
 
     @Column(name = "CheckInDate")
     @Temporal(TemporalType.TIMESTAMP)
@@ -31,19 +31,19 @@ public class Receipt extends BaseEntity implements Serializable {
 
     // Getters and Setters
 
-    public String getRentalReceiptID() {
-        return rentalReceiptID;
+    public int getRentalReceiptID() {
+        return id;
     }
 
-    public void setRentalReceiptID(String rentalReceiptID) {
-        this.rentalReceiptID = rentalReceiptID;
+    public void setRentalReceiptID(Integer id) {
+        this.id = id;
     }
 
-    public String getRoomID() {
+    public int getRoomID() {
         return roomID;
     }
 
-    public void setRoomID(String roomID) {
+    public void setRoomID(int roomID) {
         this.roomID = roomID;
     }
 

@@ -6,8 +6,8 @@ import javax.validation.constraints.Size;
 
 public class RentalReceiptDetailModel extends BaseModel {
 
-    @NotEmpty(message = "{rentalReceiptDetail.validation.rentalReceiptID.required}")
-    private String rentalReceiptID;
+    @NotNull(message = "{rentalReceiptDetail.validation.rentalReceiptID.required}")
+    private Integer id;  // Đã thay đổi kiểu dữ liệu từ String sang Integer
 
     @NotEmpty(message = "{rentalReceiptDetail.validation.customerName.required}")
     @Size(max = 30, message = "{rentalReceiptDetail.validation.customerName.max}")
@@ -37,9 +37,9 @@ public class RentalReceiptDetailModel extends BaseModel {
     public RentalReceiptDetailModel() {
     }
 
-    public RentalReceiptDetailModel(String rentalReceiptID, String customerName, String address, String idNumber,
+    public RentalReceiptDetailModel(Integer id, String customerName, String address, String idNumber,
                                     String customerTypeName, Float surchargeRate, Float totalInvoiceAmount, Integer totalRentalDays) {
-        this.rentalReceiptID = rentalReceiptID;
+        this.id = id;
         this.customerName = customerName;
         this.address = address;
         this.idNumber = idNumber;
@@ -51,12 +51,12 @@ public class RentalReceiptDetailModel extends BaseModel {
 
     // Getters and Setters
 
-    public String getRentalReceiptID() {
-        return rentalReceiptID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setRentalReceiptID(String rentalReceiptID) {
-        this.rentalReceiptID = rentalReceiptID;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getCustomerName() {
